@@ -1,0 +1,10 @@
+﻿@page "/"
+
+<h4>Welcome to the Wizard</h4>
+<CascadingValue Value="Model">
+    <WizardContainer />
+</CascadingValue>
+
+@code {
+    public WizardModel Model { get; set; } = new WizardModel();
+}

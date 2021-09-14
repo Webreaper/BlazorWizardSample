@@ -1,0 +1,49 @@
+﻿<div class="alert alert-secondary mt-4" role="alert">
+    <h2>Wizard Step @Step</h2>
+
+    @if (Step == 1)
+    {
+        <WizardStep1 />
+    }
+    else if (Step == 2)
+    {
+        <WizardStep2 />
+    }
+    else if (Step == 3)
+    {
+        <WizardStep3 />
+    }
+    else if( Step == 4 )
+    {
+        <h2>Results</h2>
+        <p>Choice 1 == @Model.Choice1.  Choice 2 == @Model.Choice2. Choice 3 == @Model.Choice3</p>
+    }
+
+    @if (Step != 1)
+    {
+        <button @onclick="Prev" class="btn btn-primary" >Prev</button>
+    }
+    @if (Step != 4)
+    {
+        <button @onclick="Next" class="btn btn-primary" >Next</button>
+    }
+</div>
+
+@code {
+    [CascadingParameter]
+    public WizardModel Model { get; set; }
+
+    public int Step { get; set; } = 1;
+
+    private void Next()
+    {
+        Step++;
+        StateHasChanged();
+    }
+
+    private void Prev()
+    {
+        Step--;
+        StateHasChanged();
+    }
+}

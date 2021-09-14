@@ -1,0 +1,9 @@
+﻿<div class="alert alert-secondary mt-4" role="alert">
+    <label>Choice 2:</label>
+    <input @bind-value="Model.Choice2" />
+</div>
+
+@code {
+    [CascadingParameter]
+    public WizardModel Model { get; set; }
+}
