@@ -1,5 +1,5 @@
 # BlazorWizardSample
- Sample of an approach to build a Wizard in Blazor, written for [u/dchurch2444](https://www.reddit.com/user/dchurch2444/)
+ Sample of an approach to build a Wizard in Blazor, written to demonstrate how Blazor is easy. Total development time, 38 mins.
 
 <img src="./WizardSample.gif">
 
